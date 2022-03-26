@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+        <title> Main Page</title>
+    </head>
+
+    <body>
+        <h1> Welcome {{current_user}}! </h1>
+        {% if length <= 0 %}
+            <p> Please add an artist</p> 
+        {% else %}
+            <div class = "artist_info_box">
+                <h1> About the Artist </h1>
+                <img src= "{{artist_img}}" class = "artist_img"> </br>
+                Followers: {{artist_follower}} </br>
+                Genres: {{artist_genre}} </br>
+                <a href = "{{artist_page}}"> Link to artist page </a>
+            </div>
+
+            <div class = "track_info_box">
+                <h1>About the Track </h1> 
+                Album Name: {{album_name}} </br>
+                Release Date: {{release_date}} </br>
+                Popularity: {{popularity}} </br>
+                Track Number: {{track_number}} </br>
+                
+                <h1>List of Artists in the Database </h1>
+                {% for i in range(length) %}
+                    <p> {{artistName_list[i]}}</p>
+                {% endfor %}
+                
+            </div>
+
+            <div class = "musicbox">
+                <ul>
+                    <li> <img src= "{{image}}" class = "music_bg_img"> </li>
+                    <li> <img src= "{{image}}" class = "music_img"> </li>
+                </ul>
+
+                <div class = "audio_box">
+                    <audio controls src = {{url}}> </audio> </br>
+                    <h2>{{title}}</h2>
+                    <h3> {{artist}} </h3>
+                    <p> <a href="{{lyrics}}"> Link to Lyrics </a> </br>
+                    <a href="{{spotify_url}}"> Listen on Spotify </a> </p>
+                </div>     
+            </div>
+        {% endif %}
+
+        <form method = "POST" action = "/index"> 
+            <label for="artist_input"> Type in artist to add! </label><br>
+            <input type = "text" name = "artist_input" placeholder = "Type Artist">
+        
+            <input type = "submit" value = "Submit">
+        </form>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id = "flashes" class = "flashes">
+                    {% for message in messages %}
+                        <li> {{message}} </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+    </body>
+</html>

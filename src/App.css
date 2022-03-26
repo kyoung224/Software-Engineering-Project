@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  margin: 15pt;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-size: 10pt;
+  background-color: beige;
+}
+
+h2{
+  font-size: 15pt;
+  color: #212121;
+}
+
+h3{
+  font-size: 11pt;
+  color: #bdbdbd;
+}
+
+.artist_info_box{
+  width: 33%;
+  top: 15%;
+  position: relative;
+  height: auto;
+  float: left;
+  font-size: 13pt;
+  line-height: 1.6;
+}
+
+.artist_img{
+  height: 200px;
+  width: 200px;
+  border-radius: 80%;
+  margin-bottom: 30px;
+}
+
+.track_info_box{
+  width: 33%;
+  top: 15%;
+  position: relative;
+  height: auto;
+  float: right;
+  font-size: 13pt;
+  line-height: 1.6;
+}
+
+li.track_info_box{
+  margin-left: 30px;
+}
+.musicbox{
+  width: 33%;
+  height: 600px;
+  border-style: solid;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border-color:rgba(5, 5, 5, 0.034);
+  margin-bottom: 10pt;
+}
+
+ul{
+  position:relative;
+  list-style-type: none;   
+}
+
+li{
+  position:absolute; 
+}
+
+.music_bg_img{
+  margin-right: 80px;
+  height: 400px;
+  width: 600px;
+  filter: blur(15px);
+  transform: translate(-10%, -20px);
+  transform: scale(1.5, 1.5);
+}
+
+.music_img{
+  height: 100%;
+  width: 100%;
+  transform: translate(-15px, 10px);
+}
+
+.audio_box{
+  position: absolute;
+  bottom: 5%;
+  margin-left: 1%;
+  width: 100%;
+  height: 30%;
+}
+
+audio::-webkit-media-controls-play-button,
+   audio::-webkit-media-controls-panel {
+   background-color: rgb(212, 212, 212);
+  }
+
+audio{
+  width: 89%;
+  background-color: rgb(212, 212, 212);
+}
+
+label{
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.flashes{
+  font-weight: bold;
+  font-size: 15pt;
+  color: red;
+  left: 425pt;
+}
+
+.flashes_login{
+  margin-left: 3%;
+}
+
+.logNsign{
+  margin-top: 15%;
+}
+
+form{
+  margin-left: 35%;
+  width: 450px;
+}
+
+.inputBox{
+  width: 300px;
+  height: 30px;
+  border: solid grey;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+.submitButton{
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 7px;
+  margin-top: 10px;
+  background-color: #F4D03F;
+}

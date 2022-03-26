@@ -1,0 +1,140 @@
+body{
+    margin: 15pt;
+    font-family: "Times New Roman";
+    text-align: center;
+    font-size: 10pt;
+    background-color: beige;
+}
+
+h2{
+    font-size: 15pt;
+    color: #212121;
+}
+
+h3{
+    font-size: 11pt;
+    color: #bdbdbd;
+}
+
+.artist_info_box{
+    width: 450px;
+    top: 15%;
+    position: relative;
+    height: auto;
+    float: left;
+    font-size: 13pt;
+    line-height: 1.6;
+}
+
+.artist_img{
+    height: 200px;
+    width: 200px;
+    border-radius: 80%;
+    margin-bottom: 30px;
+}
+
+.track_info_box{
+    width: 450px;
+    top: 15%;
+    position: relative;
+    height: auto;
+    float: right;
+    font-size: 13pt;
+    line-height: 1.6;
+}
+
+.musicbox{
+    width: 450px;
+    height: 600px;
+    border-style: solid;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border-color:rgba(5, 5, 5, 0.034);
+    margin-bottom: 10pt;
+}
+
+ul{
+    position:relative;
+    list-style-type: none;   
+}
+
+li{
+    position:absolute; 
+}
+
+.music_bg_img{
+    margin-right: 80px;
+    height: 400px;
+    width: 600px;
+    filter: blur(15px);
+    transform: translate(-10%, -20px);
+    transform: scale(1.5, 1.5);
+}
+
+.music_img{
+    height: 400px;
+    width: 400px;
+    transform: translate(-15px, 10px);
+}
+
+.audio_box{
+    position: absolute;
+    bottom: 0;
+    width: 450px;
+    height: 180px;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: rgb(212, 212, 212);
+    }
+
+audio{
+    width: 400px;
+    background-color: rgb(212, 212, 212);
+}
+
+label{
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.flashes{
+    font-weight: bold;
+    font-size: 15pt;
+    color: red;
+    left: 425pt;
+}
+
+.flashes_login{
+    margin-left: 3%;
+}
+
+.logNsign{
+    margin-top: 15%;
+}
+
+form{
+    margin-left: 35%;
+    width: 450px;
+}
+
+.inputBox{
+    width: 300px;
+    height: 30px;
+    border: solid grey;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+.submitButton{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 7px;
+    margin-top: 10px;
+    background-color: #F4D03F;
+}

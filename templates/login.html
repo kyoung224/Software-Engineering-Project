@@ -1,0 +1,74 @@
+<html>
+	<head> 
+		<link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
+		<title> Log in / Sign up Page</title> 
+
+		<style>
+			body{
+				margin: 15pt;
+				font-family: "Times New Roman";
+				text-align: center;
+				font-size: 10pt;
+				background-color: beige;
+			}
+			
+			.logNsign{
+				margin-top: 15%;
+			}
+
+			form{
+				margin-left: 35%;
+				width: 450px;
+			}
+
+			.inputBox{
+				width: 300px;
+				height: 30px;
+				border: solid grey;
+				border-radius: 3px;
+				padding-left: 8px;
+			}
+
+			.submitButton{
+				width: 150px;
+				height: 30px;
+				border: none;
+				border-radius: 20px;
+				padding-left: 7px;
+				margin-top: 10px;
+				background-color: #F4D03F;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class = logNsign> 
+			<h1> Log in</h1>
+			<form method = "POST" action = "/login" onSubmit = "return validateForm();">
+				<input type = "text" name = "username" placeholder = "Enter Username" class = "inputBox">
+				<input type = "submit" value = "Log in" class = submitButton>
+			</form>
+			
+			<h1> Sign up</h1> 
+			<form method = "POST" action = "/sign_up" onSubmit = "return validateForm();">
+				<input type = "text" name = "sign_up_username" placeholder = "Enter Username" class = "inputBox">
+				<input type = "submit" value = "Sign up" class = "submitButton">
+			</form>
+		</div>
+		
+		<div class = "flashes_login"> 
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<ul id = "flashes" class = "flashes">
+						{% for message in messages %}
+							<li> {{message}} </li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+		</div>
+
+	</body>
+	<script src = "/static/script.js"></script>
+</html>
